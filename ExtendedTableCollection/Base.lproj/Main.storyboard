@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="P3x-82-6DL" kind="relationship" relationship="viewControllers" id="xJi-hw-Hdu"/>
+                        <segue destination="1EW-0f-ax3" kind="relationship" relationship="viewControllers" id="veq-sd-SU4"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Table Blog Posts-->
+        <scene sceneID="n0r-dw-YVZ">
+            <objects>
+                <tableViewController id="nvX-pQ-hbj" customClass="TableViewController" customModule="ExtendedTableCollection" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="JK5-cE-Q1N">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="nvX-pQ-hbj" id="7uk-4q-LjO"/>
+                            <outlet property="delegate" destination="nvX-pQ-hbj" id="PaD-Wk-Bkl"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Table Blog Posts" id="bj6-Un-MIz"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O1v-eq-cnk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1677" y="-286"/>
+        </scene>
+        <!--Collection Blog Posts-->
+        <scene sceneID="Q9Q-G3-cCZ">
+            <objects>
+                <collectionViewController id="Gm1-NL-Y0d" customClass="CollectionViewController" customModule="ExtendedTableCollection" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="cYb-8D-Rj7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7Sg-3W-Jlg">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="Gm1-NL-Y0d" id="GX4-pR-4kW"/>
+                            <outlet property="delegate" destination="Gm1-NL-Y0d" id="tVh-BL-eDF"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Collection Blog Posts" id="dwz-Ji-tFQ"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e9t-Ce-Vqr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1677" y="590"/>
+        </scene>
+        <!--Table-->
+        <scene sceneID="5ub-mO-Ymr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P3x-82-6DL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Table" image="rows" id="Y00-ge-Bgr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nk5-Jk-s8L">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nvX-pQ-hbj" kind="relationship" relationship="rootViewController" id="wJR-D4-PaX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nev-4W-2Fl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="865" y="-286"/>
+        </scene>
+        <!--Collection-->
+        <scene sceneID="1pI-f2-ZZ9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1EW-0f-ax3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Collection" image="grid" id="QFV-Xr-tkr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zzf-uv-kbe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Gm1-NL-Y0d" kind="relationship" relationship="rootViewController" id="H71-mJ-Gcm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="smH-bP-5a9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="865" y="590"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="grid" width="24" height="24"/>
+        <image name="rows" width="24" height="24"/>
+    </resources>
+</document>
